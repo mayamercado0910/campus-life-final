@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MMU Dining Options</title>
+
+  <!-- Bootstrap Stylesheet -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+  <!-- Top Banner -->
+  <header class="text-center bg-primary text-white py-4 mb-4">
+    <div class="container">
+      <h1 id="header-text">Dining at Mount Mary University</h1>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg mb-4">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="index.html">MMU</a>
+
+      <button 
+        class="navbar-toggler" 
+        type="button"
+        data-bs-toggle="collapse" 
+        data-bs-target="#mainMenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Apply & Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="page2.html">Dining</a></li>
+          <li class="nav-item"><a class="nav-link" href="page3.html">Calendar & Events</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container mb-5">
+
+    <!-- Dining Hall Section -->
+    <section id="main-dining" class="mb-5">
+
+      <!-- Featured Image -->
+      <div class="text-center mb-4">
+        <img 
+          src="https://assets.isu.pub/document-structure/230424193401-053974e4d882a732bec82683686656eb/v1/531f3e232d6f1df547db74ae86dc2c4f.jpeg" 
+          alt="MMU Magazine Cover" 
+          class="img-fluid rounded"
+        />
+      </div>
+
+      <h2>Main Dining Hall</h2>
+
+      <div class="row mt-3">
+        <div class="col-md-6 mb-4">
+          <h3>What’s Available</h3>
+          <ul class="list-group">
+            <li class="list-group-item">Classic Grilled Chicken Sandwich</li>
+            <li class="list-group-item">Vegetable Alfredo Pasta</li>
+            <li class="list-group-item">Build-Your-Own Salad Bar</li>
+            <li class="list-group-item">Chef’s Daily Soup</li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <h3>Service Hours</h3>
+          <ul class="list-group">
+            <li class="list-group-item">Monday – Friday: 7:00 AM – 7:00 PM</li>
+            <li class="list-group-item">Saturday – Sunday: 9:00 AM – 6:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Cyber Café -->
+    <section id="cafe">
+      <h2>Cyber Café</h2>
+
+      <div class="row mt-3">
+        <div class="col-md-6 mb-4">
+          <h3>Café Offerings</h3>
+          <ul class="list-group">
+            <li class="list-group-item">Hot & Iced Coffee Drinks</li>
+            <li class="list-group-item">Assorted Pastries</li>
+            <li class="list-group-item">Sandwiches To-Go</li>
+            <li class="list-group-item">Fresh Smoothies</li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <h3>Café Hours</h3>
+          <ul class="list-group">
+            <li class="list-group-item">Weekdays: 8:00 AM – 5:00 PM</li>
+            <li class="list-group-item">Closed Saturday & Sunday</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="text-center bg-primary text-white py-3">
+    <p class="mb-0">&copy; 2025 Mount Mary University • Dining Services</p>
+  </footer>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      // Highlight the current page link
+      const pageName = window.location.pathname.split("/").pop();
+      document.querySelectorAll(".nav-link").forEach(link => {
+        if (link.getAttribute("href") === pageName) {
+          link.classList.add("active");
+        }
+      });
+
+      // Time-based greeting message
+      const title = document.getElementById("header-text");
+      const currentHour = new Date().getHours();
+      let welcomeMsg = "Dining at Mount Mary University";
+
+      if (currentHour >= 5 && currentHour < 12) {
+        welcomeMsg = "Good Morning — Enjoy Your Meal at MMU Dining";
+      } else if (currentHour >= 12 && currentHour < 18) {
+        welcomeMsg = "Good Afternoon — Explore MMU Dining Options";
+      } else {
+        welcomeMsg = "Good Evening — Welcome to MMU Dining Services";
+      }
+
+      title.textContent = welcomeMsg;
+    });
+  </script>
+
+</body>
+</html>
