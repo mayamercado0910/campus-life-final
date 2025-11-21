@@ -1,0 +1,68 @@
+/* Contact Area Wrapper */
+.contact-wrapper {
+  padding: 2.5rem 1.5rem;
+  background-color: #fafafa;
+}
+
+.contact-wrapper h2 {
+  text-align: center;
+  color: #024070;
+  margin-bottom: 1.2rem;
+}
+
+/* Layout for details + form */
+.contact-grid {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.info-block,
+.form-block {
+  flex: 1;
+}
+
+/* Contact text styling */
+.info-block p {
+  margin: 0.4rem 0;
+  line-height: 1.4;
+}
+
+/* Form Styling */
+.form-block label {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.form-block input,
+.form-block textarea {
+  width: 100%;
+  padding: 0.85rem;
+  border: 1px solid #bfbfbf;
+  border-radius: 6px;
+  margin-bottom: 1.1rem;
+  background-color: #fff;
+}
+
+/* Button */
+.form-block button {
+  background-color: #0060b8;
+  color: #ffffff;
+  padding: 0.9rem 1.4rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form-block button:hover {
+  background-color: #004a8a;
+}
+
+/* Map Container */
+.map-container {
+  margin-top: 2.5rem;
+  text-align: center;
+}
